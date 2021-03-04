@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ISample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Sample1.Demo();
+            //Sample2.Demo();
+            //Sample3.Demo();
+            //Sample4.Demo();
+            //Sample5.Demo();
+            //Sample6.Demo();
+            Sample7.Demo();
+            Sample8.Demo();
+            Sample9.Demo();
+        }
+    }
+}

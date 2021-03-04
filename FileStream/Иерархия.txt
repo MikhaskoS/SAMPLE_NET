@@ -1,0 +1,40 @@
+В этом разделе содержатся примеры по работе с файлами и реестром:
+получение путей к файлам и каталогам, запись и чтение файлов
+
+
+
+Классы для работы с файловой системой:
+
+
+             Object
+            (System)--------------------------------------------------
+            /                     |          |           |            | 
+   MarshalByRefObject             |          |           |            |
+        (System)                  |          |           |            |
+           |                  Directory     File        Path       DriveInfo
+    FileSystemInfo           (System.IO) (System.IO) (System.IO)  (System.IO)
+      (System.IO)
+     /           \
+ FileInfo     DirectoryInfo    
+ (System.IO)  (System.IO)
+ 
+ 
+ 
+ Иерархия классов, связанных с потоками из пространства имен System.IO
+ 
+             ------------------ System.Object ----------------
+             |                        |                      | 
+             |                   BinaryReader           BinaryWriter
+             |                   
+             |                   
+             |                   
+ ------     System.MarshalByRefObject -------------                         
+ |                        |                      |
+ |                        |                      |
+ Stream               TextReader             TextWriter
+ | | |                   |  |                 |   |
+ | | |- BuferedStream    |  - StringReader    |   |--StringWriter
+ | |                     |                    |
+ | |--MemoryStream       |----StreamReader    |------StreamWriter 
+ |
+ |----FileStream

@@ -1,0 +1,82 @@
+Коллекции реализуют ряд интерфейсов. Вот краткое их описание.
+-------------------  System.Collections ------------------------------
+
+IList : ICollection, IEnumerable 
+   - Предоставляет коллекцию объектов, к которым можно получить 
+     доступ отдельно, по индексу. 
+ICollection : IEnumerable 
+   - Определяет размер, перечислители и методы синхронизации для всех коллекций.         
+IEnumerable  
+   - Перебор элементов. Поддерживает метод GetEnumerator, возвращающий 
+     интерфейс IEnumerator        
+IComparer  
+   -  Сравнение объектов.
+IDictionary : ICollection, IEnumerable 
+   - Коллекция из пар ключ\значение.
+IDictionaryEnumerator : IEnumerator 
+   - Нумератор для коллекции, реализующей интерфейс IDictionary. 
+IEnumerator 
+   - Обеспечивает поэлементный доступ к коллекции. 
+IEqualityComparer 
+   - Проверка равенства двух объектов. 
+IHashCodeProvider 
+   - устаревший. Вместо него используется IEqualityComparer. 
+=============== System.Collections ===================
+ArrayList 
+BitArray  
+CaseInsensitiveComparer  
+CaseInsensitiveHashCodeProvider 
+CollectionBase  
+Comparer   
+DictionaryBase  
+Hashtable  
+Queue   
+ReadOnlyCollectionBase  
+SortedList 
+Stack  
+======================================================
+-----------System.Collections.Generic-----------------
+Comparer<(Of <(T>)>)  
+Dictionary<(Of <(TKey, TValue>)>)  
+Dictionary<(Of <(TKey, TValue>)>)
+Dictionary<(Of <(TKey, TValue>)>)
+EqualityComparer<(Of <(T>)>)
+HashSet<(Of <(T>)>) 
+KeyedByTypeCollection<(Of <(TItem>)>)
+KeyNotFoundException 
+LinkedList<(Of <(T>)>)  
+LinkedListNode<(Of <(T>)>)  
+List<(Of <(T>)>)  
+Queue<(Of <(T>)>)
+SortedDictionary<(Of <(TKey, TValue>)>) 
+SortedDictionary<(Of <(TKey, TValue>)>) 
+SortedDictionary<(Of <(TKey, TValue>)>)
+SortedList<(Of <(TKey, TValue>)>)  
+IComparer<(Of <(T>)>)
+Stack<(Of <(T>)>)  
+SynchronizedCollection<(Of <(T>)>)
+SynchronizedKeyedCollection<(Of <(K, T>)>) 
+SynchronizedReadOnlyCollection<(Of <(T>)>) 
+
+------------------------------------------------------
+
+========== System.Collections.Generic ================
+ICollection<(Of <(T>)>)  
+IComparer<(Of <(T>)>)   
+IDictionary<(Of <(TKey, TValue>)>) 
+IEnumerable<(Of <(T>)>)  
+IEnumerator<(Of <(T>)>)  
+IEqualityComparer<(Of <(T>)>)  
+IList<(Of <(T>)>)  
+======================================================
+
+
+              
+------------------  System.Collections.Specialized -----------------------------
+Здесь имеются некоторые специализированные коллекции. 
+
+
+
+--------------------------------------------------------------------------------
+ICloneable -  Поддерживает создание точной копии, при котором создается 
+              новый экземпляр класса с тем же значением, что и у существующего экземпляра.
