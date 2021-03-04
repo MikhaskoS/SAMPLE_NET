@@ -53,7 +53,11 @@ namespace ThreadSample
 
             #region Task
 
-            //TaskSample01.Demo();
+            //TaskSample01.Demo();    // способы запуска задачи
+            //TaskSample02.Demo();    // вложенные задачи
+            //TaskSample03.Demo();    // массивы задач
+            TaskSample04.Demo();      // получение результата из задачи
+            //TaskSample10.Demo();
 
             #endregion
 

@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace ThreadSample
 {
-    public class TaskSample01
+    public class TaskSample10
     {
         public static async void Demo()
         {
