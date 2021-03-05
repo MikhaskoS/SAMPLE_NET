@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 
 using System.Windows.Forms;
@@ -26,14 +23,22 @@ namespace ThreadSample
 
 
         // Используется делегат ThreadStart
-        public static void ThreadStartSample1()
+        public static void Demo1()
         {
-
             ThreadStart operation = new ThreadStart(Printer.PrintNumbers);
 
+            Thread.CurrentThread.Name = "Main Thread";  // имя основного потока
+            
             Thread thread1 = new Thread(operation);
-
+            thread1.Name = "Printer Thread";             // имя запущенного потока
+            thread1.Priority = ThreadPriority.Highest;   // приоритет (если нужно)
             thread1.Start();
+
+            // или так
+            //Thread thread2 = new Thread(Printer.PrintNumbers);
+            //thread2.Start();
+
+            Console.WriteLine("{0}:{1}", Thread.CurrentThread.ManagedThreadId, Thread.CurrentThread.Name);
         }
 
         public static void ThreadStartSample2()
@@ -102,9 +107,10 @@ namespace ThreadSample
         public static void PrintNumbers()
         {
             Console.WriteLine("Действия, выполняемые в потоке.");
-            for (int i = 0; i < 5; i++)
+            Console.WriteLine("{0}:{1}", Thread.CurrentThread.ManagedThreadId, Thread.CurrentThread.Name);
+            for (int i = 0; i < 50; i++)
             {
-                Console.Write("{0}, ", i); Thread.Sleep(2000);
+                Console.Write("{0}, ", i); Thread.Sleep(1000);
             }
 
             Console.WriteLine("\nДействия в потоке завершены.");

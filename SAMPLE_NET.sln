@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTime", "DateTime\DateTi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thread", "Thread\Thread.csproj", "{707D40C1-0720-4B9D-BE8F-0B800AE1183D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "Collections\Collections.csproj", "{AA169694-AEED-4C99-914A-247C0C6573A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_Collections", "Collections\05_Collections.csproj", "{AA169694-AEED-4C99-914A-247C0C6573A8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeCreate", "Type\TypeCreate.csproj", "{5D4F3394-C5D9-480E-925A-31F46BF975F3}"
 EndProject

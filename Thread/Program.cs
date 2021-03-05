@@ -9,10 +9,16 @@ namespace ThreadSample
     {
         static void Main(string[] args)
         {
+            /* - Для отладки потоков полезно окно ПКМ -> "Место отладки", где можно следить за потоками и выбирать их.
+             * - Также полезны окна "Потоки" и "Контрольное значение" - они станут доступны в режиме отладки:
+             *   Отладка -> Окна ...
+             *   Если установить в качестве контрольного значения Thread.CurrentThread.ManagedThreadId можно следить за id потоков
+             */
+
             #region Thread
             //-------------------------------------------------------
             // Как создать поток?
-            //Sample1.ThreadStartSample1();
+            //Sample1.Demo1();
             //Sample1.ThreadStartSample2();
             //Sample1.ParameterizedThreadStartSample();    // (707)
 
@@ -20,11 +26,11 @@ namespace ThreadSample
             //Sample2.ThreadInfo();
 
             // Как запустить несколько потоков, указать их приоритет
-            // и дождаться завершения?
+            // и дождаться завершения. Join
             //Sample3.ThreadingSample();
 
-            // Как передать данные потоку?
-            //Sample4.ParameterizedThreadSample();
+            // Как передать данные потоку
+            //Sample4.ParameterizedThreadSample();               
 
             // Пример сортировки в одном и в двух потоках
             //Sample5.TestSort();
@@ -35,7 +41,6 @@ namespace ThreadSample
             // Атомарные операции для предотвращения коллизий
             //Sample7.InterlockSamle();
 
-
             // Несколько спосбов решения проблем параллелизма
             // - маркер блокировки lock
             // - атомарные опрерации
@@ -43,7 +48,11 @@ namespace ThreadSample
             // - аттрибут [Synchronization]
             //Sample8.lockSample();
 
-            //Sample9.BackThread();
+            // Фоновый поток
+            //Sample9.BackThread();        
+
+            // Специально разработанные коллекции, к которым могут обращаться несколько потоков
+
             #endregion
 
             //---------------------------------------------------------
@@ -56,7 +65,7 @@ namespace ThreadSample
             //TaskSample01.Demo();    // способы запуска задачи
             //TaskSample02.Demo();    // вложенные задачи
             //TaskSample03.Demo();    // массивы задач
-            TaskSample04.Demo();      // получение результата из задачи
+            //TaskSample04.Demo();      // получение результата из задачи
             //TaskSample10.Demo();
 
             #endregion

@@ -16,11 +16,11 @@ namespace ThreadSample
             Thread bgroundThread = new Thread(new ThreadStart(Printer9.PrintNumbers));
             
             // Теперь это фоновый поток. Такой поток выполняет некритические задачи и может
-            // лекго прерван, как в этом примере
+            // лекго прерван, как в этом примере (нажав Enter закрывается окно и поток прерывается)
             bgroundThread.IsBackground = true;
             bgroundThread.Start();
-
         }
+
     }
 
 

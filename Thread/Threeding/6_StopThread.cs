@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using System.Threading;
+
 
 // Как принудительно остановить поток?
 namespace ThreadSample
@@ -20,7 +17,7 @@ namespace ThreadSample
             Thread.Sleep(1000); 
 
             
-            // Этот фрагмент кода может выполниться 
+            // Этот фрагмент кода может выполнится 
             // только целиком, но не в обычном приложении, а при работе
             // с хостом (пример будет в ADO.NET). Здесь это не нужно.
            
@@ -50,7 +47,8 @@ namespace ThreadSample
         {
             Console.ReadLine();
             Thread theTread = (Thread)obj;
-            theTread.Abort();
+            theTread.Abort();            // Не рекомендуется, очень жестко работает. Может порушить объекты внутри прерываемого потока.
+            //theTread.Interrupt()  // срабатывает внутри Sleep либо SpinWait
         }
 
         public static void AbortThreadSample()

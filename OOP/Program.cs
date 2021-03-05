@@ -7,11 +7,15 @@ namespace OOP
     {
         static void Main()
         {
+
+            // построение объекта класса без создания локальной переменной
+            new Class01() { name = "Вася", age = 25 }.Print();
+
             //Console.WriteLine("Hello World!");
 
             //Sample.Demo();
 
-            SampleLogger.Demo();
+            //SampleLogger.Demo();
 
             Console.Read();
         }
