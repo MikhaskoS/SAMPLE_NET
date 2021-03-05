@@ -16,6 +16,9 @@ namespace OOP
 
             // если класс небольшой - нет смысла его где-то создавать (анонимный тип)
             var sudent = new { Name = "Bob", Id = 42 };
+
+            // или даже так - одновременно инициализировать и вызвать метод
+            new Student() { Name = "Вася", Age = 23 }.PrintMessage("Hello!");
         }
     }
 
@@ -35,6 +38,11 @@ namespace OOP
         {
             this.name = name;
             this.age = age;
+        }
+
+        public void PrintMessage(string msg)
+        {
+            Console.WriteLine($"{Name } said {msg}");
         }
     }
 }

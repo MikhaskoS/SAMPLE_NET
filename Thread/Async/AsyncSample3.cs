@@ -20,7 +20,6 @@ namespace ThreadSample
             //Факториал равен 720
             //Конец метода FactorialAsync
             //Конец метода FactorialAsync
-
         }
         public static void Demo3b()
         {

@@ -53,9 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Async\Sample1.cs" />
-    <Compile Include="Async\Sample2.cs" />
-    <Compile Include="Async\Sample3.cs" />
+    <Compile Include="Async\AsyncSample1.cs" />
+    <Compile Include="Async\AsyncSample2.cs" />
+    <Compile Include="Async\AsyncSample3.cs" />
     <Compile Include="Async\Sample4.cs" />
     <Compile Include="Async\Sample5.cs" />
     <Compile Include="Async\Sample6.cs" />
@@ -76,18 +76,22 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Threeding\4_TreadingParam.cs" />
-    <Compile Include="Threeding\8_lock.cs" />
+    <Compile Include="Threeding\LockSample01.cs" />
     <Compile Include="Threeding\9_BackgroundThread.cs" />
     <Compile Include="Threeding\10_ConcurentCollections.cs" />
+    <Compile Include="Threeding\LockSample02.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Async\ReadMe.txt" />
+    <Content Include="Async\ReadMe1.txt" />
+    <Content Include="Async\ReadMe2.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

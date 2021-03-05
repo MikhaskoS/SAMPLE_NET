@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
 
 using System.Threading;
 
 namespace ThreadSample
 {
-    class Sample8
+    class LockSample01
     {
-        public static void lockSample()
+        public static void LockSample()
         {
             Counter count = new Counter();
 
@@ -42,17 +38,16 @@ namespace ThreadSample
             Counter count = (Counter)param;
             for (int x = 0; x < 1000; ++x)
             {
-                count.UpdateCount0();
-                //count.UpdateCount1();
-                //count.UpdateCount2();
-                //count.UpdateCount2b();
-                //count.UpdateCount3();
+                //count.UpdateCount_v1();
+                //count.UpdateCount_v2();
+                count.UpdateCount_v3();
+                //count.UpdateCount_v4();
+                //count.UpdateCount_v5();
             }
         }
 
-
         // Если не нужно явно писать код внутри класса для синхронизации, можно использовать аттрибут [Synchronization]
-        // В этом случае count.UpdateCount0(); будет отлично работать
+        // В этом случае count.UpdateCount_v1(); будет отлично работать
         //[Synchronization]
         //public class Counter : ContextBoundObject
 
@@ -64,17 +59,16 @@ namespace ThreadSample
             public int EventCount { get { return _eventCount; } }
 
 
-
-            public void UpdateCount0()
+            public void UpdateCount_v1()
             {
                 // Результат непредсказуем (проблема параллелизма)
-                _count = _count + 1;
+                _count++;
                 if (Count % 2 == 0)
                 {
-                    _eventCount = _eventCount + 1; ;
+                    _eventCount++; 
                 }
             }
-            public void UpdateCount1()
+            public void UpdateCount_v2()
             {
                 // Если использовать атомарные операции из предыдущего примера, мы значение
                 // для _count будем получать всегда верное, однако для _eventCount будут
@@ -87,45 +81,45 @@ namespace ThreadSample
                     Interlocked.Increment(ref _eventCount);
                 }
             }
-            public void UpdateCount2()
+            public void UpdateCount_v3()
             {
 
                 // Решение проблемы - синхронизирующая блокировка
                 lock (this)  // макер блокировки - текущий поток
                 {
-                    _count = _count + 1;
+                    _count++;
                     if (Count % 2 == 0)
                     {
-                        _eventCount = _eventCount + 1; ;
+                        _eventCount++; ;
                     }
                 }
             }
 
             // Так безопаснее (для открытых методов) 
             private object threadLock = new object();  // маркер блокировки
-            public void UpdateCount2b()
+            public void UpdateCount_v4()
             {
                 lock (threadLock)
                 {
-                    _count = _count + 1;
+                    _count++;
                     if (Count % 2 == 0)
                     {
-                        _eventCount = _eventCount + 1; ;
+                        _eventCount++; 
                     }
                 }
             }
 
-            public void UpdateCount3()
+            public void UpdateCount_v5()
             {
 
                 // Другой способ - использование класса Monitor
                 Monitor.Enter(this);
                 try
                 {
-                    _count = _count + 1;
+                    _count++;
                     if (Count % 2 == 0)
                     {
-                        _eventCount = _eventCount + 1; ;
+                        _eventCount++; ;
                     }
                 }
                 finally
@@ -134,7 +128,5 @@ namespace ThreadSample
                 }
             }
         }
-
-       
     }
 }

@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thread", "Thread\Thread.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_Collections", "Collections\05_Collections.csproj", "{AA169694-AEED-4C99-914A-247C0C6573A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeCreate", "Type\TypeCreate.csproj", "{5D4F3394-C5D9-480E-925A-31F46BF975F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_TypeCreate", "Type\06_TypeCreate.csproj", "{5D4F3394-C5D9-480E-925A-31F46BF975F3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generic", "Generic\Generic.csproj", "{3CC49337-A3D0-4F85-A8DC-4A88C458A3A4}"
 EndProject

@@ -7,7 +7,7 @@ namespace  ThreadSample
     {
         public static void Demo()
         {
-            System.Collections.Concurrent.ConcurrentDictionary
+            //System.Collections.Concurrent.ConcurrentDictionary
         }
     }
 }

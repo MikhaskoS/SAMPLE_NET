@@ -37,7 +37,7 @@ namespace TypeCreate
         // конструктор можно сжать до выражения (C# 7.0)
         public A(int ID) => id = ID ;
 
-        // корструктор с необязательными параметрами
+        // конструктор с необязательными параметрами
         public A(string fullName = "Вася", int ID = 0, string dop = "" )
         {
             this.fullName = fullName;

@@ -46,7 +46,7 @@ namespace ThreadSample
             // - атомарные опрерации
             // - класс Monitor
             // - аттрибут [Synchronization]
-            //Sample8.lockSample();
+            //LockSample01.LockSample();
 
             // Фоновый поток
             //Sample9.BackThread();        
@@ -62,9 +62,9 @@ namespace ThreadSample
 
             #region Task
 
-            //TaskSample01.Demo();    // способы запуска задачи
-            //TaskSample02.Demo();    // вложенные задачи
-            //TaskSample03.Demo();    // массивы задач
+            //TaskSample01.Demo();      // способы запуска задачи
+            //TaskSample02.Demo();      // вложенные задачи
+            //TaskSample03.Demo();      // массивы задач
             //TaskSample04.Demo();      // получение результата из задачи
             //TaskSample10.Demo();
 
@@ -77,7 +77,7 @@ namespace ThreadSample
             #region Async
             //AsyncSample1.Demo();
             //AsyncSample2.Demo2();
-            //AsyncSample3.Demo3a();
+            AsyncSample3.Demo3a();
             //AsyncSample3.Demo3b();
             //AsyncSample3.Demo3c();
             //AsyncSample3.Demo3d();

@@ -52,6 +52,7 @@ namespace ThreadSample
                 result *= i;
             }
             Thread.Sleep(8000);
+            //Task.Delay(80000);
             Console.WriteLine($"Факториал равен {result}");
         }
 
@@ -63,7 +64,7 @@ namespace ThreadSample
                 result *= i;
             }
             
-            Console.WriteLine($"Факториал равен {result}");
+            Console.WriteLine($"Факториал {n} равен {result}");
             return result;
         }
     }
