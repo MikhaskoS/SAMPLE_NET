@@ -53,10 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Async\AsyncSample0.cs" />
     <Compile Include="Async\AsyncSample1.cs" />
     <Compile Include="Async\AsyncSample2.cs" />
     <Compile Include="Async\AsyncSample3.cs" />
-    <Compile Include="Async\Sample4.cs" />
+    <Compile Include="Async\AsyncSample4.cs" />
     <Compile Include="Async\Sample5.cs" />
     <Compile Include="Async\Sample6.cs" />
     <Compile Include="Async\Sample7.cs" />
