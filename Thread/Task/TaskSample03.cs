@@ -46,7 +46,7 @@ namespace ThreadSample
 
 
             Task.WaitAll(tasks);                  // !!! ожидаем завершения задач 
-            Console.WriteLine("\nЗавершение метода Main");
+            Console.WriteLine("\nEnd Main");
         }
     }
 }
