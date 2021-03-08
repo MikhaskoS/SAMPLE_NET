@@ -51,9 +51,32 @@
     <Compile Include="04_Method.cs" />
     <Compile Include="05_Constructor.cs" />
     <Compile Include="06_Сlasses.cs" />
-    <Compile Include="07_Delegate_Events.cs" />
     <Compile Include="08_Lambda.cs" />
     <Compile Include="09_Deconstructor.cs" />
+    <Compile Include="Delegate\01_Delegate.cs" />
+    <Compile Include="Delegate\02_Delegate.cs" />
+    <Compile Include="Delegate\03_Delegate.cs" />
+    <Compile Include="Delegate\04_DelegateSample.cs" />
+    <Compile Include="Delegate\05_AnonymousDelegates.cs" />
+    <Compile Include="Delegate\06_Lambda.cs" />
+    <Compile Include="Delegate\Evolution.cs" />
+    <Compile Include="Events\Event_1.cs" />
+    <Compile Include="Events\Event_2.cs" />
+    <Compile Include="Events\Event_3.cs" />
+    <Compile Include="Events\Event_4.cs" />
+    <Compile Include="Events\Event_5.cs" />
+    <Compile Include="Events\Event_6.cs" />
+    <Compile Include="Events\Event_7.cs" />
+    <Compile Include="Events\Event_8.cs" />
+    <Compile Include="Interface\07_ICloneable.cs" />
+    <Compile Include="Interface\08_IComparable.cs" />
+    <Compile Include="Interface\09_IFormattable.cs" />
+    <Compile Include="Interface\Interface_01.cs" />
+    <Compile Include="Interface\Interface_02.cs" />
+    <Compile Include="Interface\Interface_03.cs" />
+    <Compile Include="Interface\Interface_04.cs" />
+    <Compile Include="Interface\Interface_05.cs" />
+    <Compile Include="Interface\Interface_06.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="02_Properties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,6 +84,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Delegate\Delegat.txt" />
+    <Content Include="Events\Events.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

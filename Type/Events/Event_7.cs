@@ -14,10 +14,12 @@ namespace EventsSmple
             {
                 Console.WriteLine(" - нажата клавиша: " + "\"" + arg.ch + "\"");
             };
+
             kevt.KeyPress += delegate(object sourse, KeyEventArgs arg)
             {
                 count++;
             };
+
             do
             {
                 key = Console.ReadKey();
