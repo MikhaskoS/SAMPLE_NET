@@ -76,6 +76,7 @@ namespace ThreadSample
             //---------------------------------------------------------
 
             #region Async
+            AsyncSample0.Demo1();
             //AsyncSample1.Demo();
             //AsyncSample2.Demo2();
             //AsyncSample3.Demo3a();
@@ -84,8 +85,8 @@ namespace ThreadSample
             //AsyncSample3.Demo3d();
             //AsyncSample3.Demo3f();
 
-            //AsyncSample.Demo4a();
-            //AsyncSample.Demo4b();
+            //AsyncSample4.Demo4a();
+            //AsyncSample4.Demo4b();
 
             //AsyncSample.Demo5a();
             //AsyncSample.Demo5b();
